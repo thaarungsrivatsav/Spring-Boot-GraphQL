@@ -1,0 +1,21 @@
+type ShipmentDetails{
+    referenceNo:ID!
+    userName:String
+    bookingStatus:String
+}
+
+type Query{
+    getAllDetails:[ShipmentDetails]
+    getByShipmentId(referenceNo:Int):ShipmentDetails
+}
+
+
+type Mutation{
+    addShipment(shipmentDetail:ShipmentDetail):String
+}
+
+input ShipmentDetail{
+    referenceNo:ID
+    userName:String
+    bookingStatus:String
+}
