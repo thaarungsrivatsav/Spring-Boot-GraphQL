@@ -1,0 +1,53 @@
+GraphQL
+
+querying - method to fetch/get the data
+
+mutation - method to update the data
+
+subscription - method to check the data which are updated or not
+
+GraphQL
+-it is to make the data transfer happend faster
+-to make the API to work faster and efficiently and quickly too
+- graphql will return the json object in the format of what we ask from the DB...
+- its based on noSQL db (without table , rows and columns)
+- for eg:
+	there is name , dob , age , salary in an db 
+in graphql if we request the object as 
+{
+ person1{
+  name
+ }
+} 
+ my obeject will return values like tis
+ {				
+  person1{
+  "name":"nameval"
+  }
+ }
+and if we want extra value with the objects then we need to call the object as
+
+{
+ person1{
+  name
+  age
+ }
+ person2{
+  dob
+  age
+ }
+} 
+ my obeject will return values like tis
+ {				
+  person1{
+  "name":"nameval",
+  "age":21
+  }
+  person1{
+  "dob":"12-12-2012",
+  "age":21
+  }
+ }
+whenever we want required values we can change the object as required and we will get the values according to that call 
+and whatever record from which field we request will be retrived from to nosql db , which has all the set of values and records in an database which will not
+be in an table format , as it is nosql it will not be in the format of the table , cols and rows.
